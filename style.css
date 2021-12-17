@@ -1,3 +1,4 @@
+/* IMPORTS */
 @font-face {
     font-family: "Lane Humouresque";
     src: url(pics/Lanehum.ttf);
@@ -7,7 +8,6 @@
 html {
     background-image: url(pics/webb-dark.png);
     /* background-image: url(pics/webb.png); */
-    /* margin: 0px; */
     font-family: "Lane Humouresque", "Arial", 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -19,12 +19,14 @@ footer {
 }
 
 input[type=text] {
-    margin: 15px;
+    /* TEXT */
     text-align: center;
+    font-style: italic;
+    /* BOX */
+    margin: 15px;
     padding: 3px 3px;
     border-radius: 4px;
     border: 1px;
-    font-style: italic;
 }
 
 label {
@@ -32,37 +34,84 @@ label {
 }
 
 p {
+    /* TEXT */
     color: white;
-    font-size: large;
     line-height: auto;
+    /* BOX */
     margin: 5px;
 }
 
+/* IDs */
+
+
 /* CLASSES */
 .tituloContainer {
-    /* Text */
-    text-align: center;
-    font-size: xx-large;
-    font-weight: 600;
-    line-height: 80px;
-    /* Box */
     display: block;
-    background-image: url(pics/wp3820436-healthy-food-wallpapers.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
+    /* background-color: #fff; */
+}
+
+.titulo {
+    font-size: x-large;
+    font-weight: 600;
+    color: white;
+    margin-right: 25px;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.nav-wrapper > .left-side > div {
+    margin: 5px;
+    font-size: 0.9em;
+}
+
+.left-side {
+    display: flex;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+}
+
+.nav-link-wrapper button {
+    /* CURSOR */
+    cursor: pointer;
+    /* TEXT */
+    color: rgb(172, 172, 172);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Lane Humouresque", "Arial", 'Lucida Sans', Arial, sans-serif;
+    /* BOX */
+    border: none;
+    background-color: transparent;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper button:hover {
+    border-bottom: 1px solid rgb(172, 172, 172);
 }
 
 .descContainer {
     /* Box */
-    display: block;
-    background-position: center;
-    /* background-size: auto; */
+    display: flex;
+    background-position: left;
+    justify-content: start;
     background-color: grey;
 }
 
+.descContainer > div {
+    margin-left: 5px;
+    margin-right: 5px;
+}
 
-
+.nav-link-wrapper button:active {
+    background-color: white;
+    color: black;
+}
 
 .selStyle {
     display: flex;
@@ -74,12 +123,12 @@ p {
 }
 
 .wrapper {
+    /* BOX */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 100vw; */
     height: 800px;
-    /* COMMENTAR AL ACABAR */
+    /* BACKGROUND */
     /* background-color: #dfe6e9; */
     background-image: url(pics/wp3837231-advent-calendar-wallpapers.jpg);
     background-position: center;
@@ -88,35 +137,39 @@ p {
 }
 
 .calendar {
+    /* BOX */
     margin: auto;
     width: 800px;
     height: 400px;
-    /* COMENTAR AL ACABAR */
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.5);
+    /* BACKGROUND */
     background-color: antiquewhite;
-    /* background-image: url(pics/v1062-pattern-12.jpg); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.5);
 }
 
 .year {
+    /* BOX */
     display: flex;
     justify-content: center;
     width: 100%;
     height: 50px;
     /* background-color: #2ecc71; */
     background-color: red;
+    /* TEXT */
     color: #fff;
 }
 
 .month {
+    /* BOX */
     display: flex;
     justify-content: center;
     width: 100%;
     height: 50px;
     /* background-color: #23ab5c; */
     background-color: rgb(113, 225, 113);
+    /* TEXT */
     color: #fff;
 }
 
