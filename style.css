@@ -4,6 +4,16 @@
     src: url(pics/Lanehum.ttf);
 }
 
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
 /* GLOBALS */
 html {
     background-image: url(pics/webb-dark.png);
@@ -95,22 +105,24 @@ p {
     border-bottom: 1px solid rgb(172, 172, 172);
 }
 
-.descContainer {
+.slideshow-container {
     /* Box */
-    display: flex;
-    background-position: left;
-    justify-content: start;
+    margin: auto;
+    position: relative;
+    max-width: 100%;
     background-color: grey;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
 }
 
 .descContainer > div {
     margin-left: 5px;
     margin-right: 5px;
-}
-
-.nav-link-wrapper button:active {
-    background-color: white;
-    color: black;
 }
 
 .selStyle {
@@ -122,6 +134,8 @@ p {
     /* background-color: antiquewhite; */
 }
 
+
+/* CALENDARIO */
 .wrapper {
     /* BOX */
     display: flex;
